@@ -18,20 +18,24 @@
 #include <stdio.h>
 
 int main(void) {
-	float order_amount;
-	int is_premium;
-	int is_blacklisted;
-	
-	printf("Enter order amount: ");
-    scanf("%f", &order_amount);
-	
-	printf("Is customer a premium member? (1 = Yes, 0 = No): ");
-    scanf("%d", &is_premium);
-	
-	printf("Is customer blacklisted? (1 = Yes, 0 = No): ");
-    scanf("%d", &is_blacklisted);
-	
-	// Complete the rest of the code
+    float order_amount;
+    int is_premium;
+    int is_blacklisted;
 
-	return 0;
+    printf("Enter order amount: ");
+    scanf("%f", &order_amount);
+
+    printf("Is customer a premium member? (1 = Yes, 0 = No): ");
+    scanf("%d", &is_premium);
+
+    printf("Is customer blacklisted? (1 = Yes, 0 = No): ");
+    scanf("%d", &is_blacklisted);
+
+    if ((order_amount > 100 || is_premium == 1) && is_blacklisted == 0) {
+        printf("Discount Applied\n");
+    } else {
+        printf("No Discount\n");
+    }
+
+    return 0;
 }
